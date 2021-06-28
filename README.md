@@ -1,2 +1,9 @@
 # Deep-Sky-Blue
-Loren 
+
+
+Loren
+Andy Kim
+Joseph Kim
+Lucy Xu
+Caleb Deng
+
