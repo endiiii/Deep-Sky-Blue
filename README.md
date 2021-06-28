@@ -1,6 +1,6 @@
 # Deep-Sky-Blue
 
-Loren Lei
+Loren
 Andy Kim
 Joseph Kim
 Lucy Xu
