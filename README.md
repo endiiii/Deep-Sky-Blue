@@ -1,4 +1,5 @@
-# Deep-Sky-Blue - Parth edited this Read Me File!!!!
+# Deep-Sky-Blue
+JosephK
 Loren Lei
 Andy Kim
 Joseph Kim
