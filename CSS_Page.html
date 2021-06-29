@@ -10,6 +10,7 @@
 <body>
     <h1><strong>CSS</strong></h1>
     <hr>
+    
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS LOGO" width = "180" height = "220">
     <div>
         CSS stands for <i>Cascading Style Sheets</i>.<br>
@@ -23,8 +24,58 @@ CSS describes how HTML elements are to be displayed on screen, paper, or in othe
         There are two ways you can link css and html class. <br>
         You can either put it inline through the use of the style attribute or use it externally through the use of a link element that connects a stylesheet to the HTML.
     </div>
+    <img src="https://www.w3schools.com/css/img_selector.gif" alt="css syntax" width="500" height="110">
     <div>
-        
+        <strong>The CSS syntax includes the selector, property, and value.</strong>
+        <ul>
+            <li>The selector decides what group is going to be changed.</li>
+            <li>The property decides how that group is going to be changed.</li>
+            <li>The value decides how much of the property of the group is going to be changed. </li>
+        </ul>
+        By putting the ; sign, you can have mutiple changes done to your group.
     </div>
+    <div>
+        These are some of the things css can do. 
+    </div>
+    <button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+<style>
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    </style>
+    
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
 </body>
 </html>
