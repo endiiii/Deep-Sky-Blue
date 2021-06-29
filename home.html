@@ -59,16 +59,17 @@
 
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="HTML_PAGE.html">HTML</a>
+                            <a onclick="window.open('HTML_PAGE.html', '_blank')">HTML</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="CSS_Page.html">CSS</a>
+                            <a onclick="window.open('CSS_Page.html', '_blank')">CSS</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="javascript.html">JavaScript</a>
+                            <a onclick="window.open('javascript.html', '_blank')">JavaScript</a>
                         </li>
                     </ul>
                 </li>
+            </ul>
         </div>
     </div>
     <script type="text/javascript">
@@ -106,7 +107,6 @@
         $(document).on("click", ".nav-close-btn", function() {
             t1.reversed(!t1.reversed());
         });
-
     </script>
 </body>
 </html>
