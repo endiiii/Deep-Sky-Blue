@@ -1,7 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <h1><strong>CSS</strong></h1>
+    <hr>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS LOGO" width = "180" height = "220">
+    <div>
+        CSS stands for <i>Cascading Style Sheets</i>.<br>
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media, and can control the layout of multiple web pages all at once.
+    </div>
+    <img src="data:image/png;base64,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" alt="html vs css" width = "260" height = "220">
+    <div>
+        While html creates the actual content on the page, css is responsible for the design or style of the website, including the layout, visual effects and background color.
+    </div>
+    <br>
+    <div>
+        There are two ways you can link css and html class. <br>
+        You can either put it inline through the use of the style attribute or use it externally through the use of a link element that connects a stylesheet to the HTML.
+    </div>
+    <img src="https://www.w3schools.com/css/img_selector.gif" alt="css syntax" width="500" height="110">
+    <div>
+        <strong>The CSS syntax includes the selector, property, and value.</strong>
+        <ul>
+            <li>The selector decides what group is going to be changed.</li>
+            <li>The property decides how that group is going to be changed.</li>
+            <li>The value decides how much of the property of the group is going to be changed. </li>
+        </ul>
+        By putting the ; sign, you can have mutiple changes done to your group.
+    </div>
+    <div>
+        These are some of the things css can do. 
+    </div>
+    <button class="accordion">Color</button>
+<div class="panel">
+  <p>Using CSS, you can change the color of texts by using the formula, <br>
+    <i>selector</i> {<br>
+    color: <i>color</i><br>
+  You can also change the background color and border color by putting <u>background-color</u> or <u>border-color</u> in place of color and choosing the color you want.</p>
+</div>
 
+<button class="accordion">Font Size and Style</button>
+<div class="panel">
+  <p>To add or change the font size and style, you can use the properties, <i>font-size</i> and <i>font-family.<br>
+  The value of font-size is determined by numbers and the value of font-family is the name of the font style, so for example, Times New Roman.
+  </i></p>
+</div>
+
+<button class="accordion">Text Align</button>
+<div class="panel">
+  <p>To align texts you use the property, <i>text-align</i>, then put a value.<br>
+  Some examples of the values are center, left, and right.</p>
+</div>
+</div>
+<style>
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    </style>
+    
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+    <div class="container">
+        <div>
+            Classes vs IDs
+        </div>
+        <img src="https://www.slashcoding.com/wp-content/uploads/2014/06/id-vs-class.png" alt="class vs id" width="400" height="160">
+        <div>
+            Classes and IDs are both used to make applying CSS easier.<br>
+            However, classes are used when the same style is used on multiple elements, while IDs are used when a style is unique to a single element. <br>
+            After assigning a class or id on a element, you can choose that element in CSS by using a period for a class, and a hashtag for an id.
+        </div>
+        <img src="https://miro.medium.com/max/540/1*8zofLlRz-7Uc0djfOR_BiA.png" alt="class & id" width="230" height="180">
+        <div>
+            CSS Box Model
+        </div>
+        <div>
+            
+        </div>
+    </div>
+  
+</body>
+<head>
     <!--hi-->
     <link href= "Font_Roboto.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -53,107 +158,4 @@
             </div>
           <br>
     </div>
-      
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-    <h1><strong>CSS</strong></h1>
-    <hr>
-    
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS LOGO" width = "180" height = "220">
-    <div>
-        CSS stands for <i>Cascading Style Sheets</i>.<br>
-CSS describes how HTML elements are to be displayed on screen, paper, or in other media, and can control the layout of multiple web pages all at once.
-    </div>
-    <img src="data:image/png;base64,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" alt="html vs css" width = "260" height = "220">
-    <div>
-        While html creates the actual content on the page, css is responsible for the design or style of the website, including the layout, visual effects and background color.
-    </div>
-    <br>
-    <div>
-        There are two ways you can link css and html class. <br>
-        You can either put it inline through the use of the style attribute or use it externally through the use of a link element that connects a stylesheet to the HTML.
-    </div>
-    <img src="https://www.w3schools.com/css/img_selector.gif" alt="css syntax" width="500" height="110">
-    <div>
-        <strong>The CSS syntax includes the selector, property, and value.</strong>
-        <ul>
-            <li>The selector decides what group is going to be changed.</li>
-            <li>The property decides how that group is going to be changed.</li>
-            <li>The value decides how much of the property of the group is going to be changed. </li>
-        </ul>
-        By putting the ; sign, you can have mutiple changes done to your group.
-    </div>
-    <div>
-        These are some of the things css can do. 
-    </div>
-    <button class="accordion">Color</button>
-<div class="panel">
-  <p>Using CSS, you can change the color of texts by using the formula, <br>
-    <i>selector</i> {<br>
-    color: <i>color</i><br>
-  You can also change the background color and border color by putting <u>background-color</u> or <u>border-color</u> in place of color and choosing the color you want.</p>
-</div>
-
-<button class="accordion">Font Size and Style</button>
-<div class="panel">
-  <p>To add or change the font size and style, you can use the properties, <i>font-size</i> and <i>font-family.<br>
-  The value of font-size is determined by numbers and the value of font-family is the name of the font style, so for example, Times New Roman.
-  </i></p>
-</div>
-
-<button class="accordion">Text Align</button>
-<div class="panel">
-  <p>To align texts you use the property, <i>text-align</i>, then put a value.<br>
-  Some examples of the values are center, left, and right.</p>
-</div>
-<style>
-    .panel {
-      padding: 0 18px;
-      background-color: white;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-    }
-    </style>
-    
-    <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-    </script>
-
-  <div>
-    Classes vs IDs
-  </div>
-  <img src="https://www.slashcoding.com/wp-content/uploads/2014/06/id-vs-class.png" alt="class vs id" width="400" height="160">
-  <div>
-    Classes and IDs are both used to make applying CSS easier.<br>
-    However, classes are used when the same style is used on multiple elements, while IDs are used when a style is unique to a single element. <br>
-    After assigning a class or id on a element, you can choose that element in CSS by using a period for a class, and a hashtag for an id.
-  </div>
-  <img src="https://miro.medium.com/max/540/1*8zofLlRz-7Uc0djfOR_BiA.png" alt="class & id" width="230" height="180">
-  <div>
-    CSS Box Model
-  </div>
-  <div>
-    
-  </div>
-
-</body>
 </html>
