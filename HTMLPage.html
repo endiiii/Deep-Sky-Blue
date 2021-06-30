@@ -188,12 +188,28 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-2">
+                <!-- Just for design purposes -->
+            </div>
+            <div class="col-8">
+                <button onclick="buttonOnClick()" type="button" class="btn btn-primary">
+                    Click this when you are done reading
+                </button>
+            </div>
+            <div class="col-2">
+                <!-- Just for design purposes -->
+            </div>
+        </div>
     </div>
     <br>
     <script>
         //some Javascript
         var userName = prompt("What is your name?");
         document.getElementById("username").textContent = userName;
+        function buttonOnClick(){
+            alert("Thank you " + userName + " for coming. Visit the other pages!")
+        }
     </script>
     </body>
 </html>
