@@ -57,6 +57,22 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-4">
+                <!-- Just for design purposes -->
+            </div>
+            <div class="col-4">
+                <span>
+                    Welcome: 
+                </span>
+                <span id="username">
+
+                </span>
+            </div>
+            <div class="col-4">
+                <!-- Just for design purposes -->
+            </div>
+        </div>
+        <div class="row">
             <div class="col-3">
                 <img src="https://hackr.io/tutorials/learn-html-5/logo/logo-html-5?ver=1587977020" alt="HTML 5 Image">
             </div>
@@ -174,5 +190,10 @@
         </div>
     </div>
     <br>
+    <script>
+        //some Javascript
+        var userName = prompt("What is your name?");
+        document.getElementById("username").textContent = userName;
+    </script>
     </body>
 </html>
