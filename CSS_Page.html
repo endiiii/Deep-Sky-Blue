@@ -11,7 +11,7 @@
     <h1><strong>CSS</strong></h1>
     <hr>
     
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS LOGO" width = "180" height = "220">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS LOGO" width = "120" height = "150">
     <div>
         CSS stands for <i>Cascading Style Sheets</i>.<br>
 CSS describes how HTML elements are to be displayed on screen, paper, or in other media, and can control the layout of multiple web pages all at once.
@@ -25,6 +25,9 @@ CSS describes how HTML elements are to be displayed on screen, paper, or in othe
         There are two ways you can link css and html class. <br>
         You can either put it inline through the use of the style attribute or use it externally through the use of a link element that connects a stylesheet to the HTML.
     </div>
+    <h3>
+      CSS Syntax
+    </h3>
     <img src="https://www.w3schools.com/css/img_selector.gif" alt="css syntax" width="500" height="110">
     <div>
         <strong>The CSS syntax includes the selector, property, and value.</strong>
@@ -48,9 +51,9 @@ CSS describes how HTML elements are to be displayed on screen, paper, or in othe
 
 <button class="accordion">Font Size and Style</button>
 <div class="panel">
-  <p>To add or change the font size and style, you can use the properties, <i>font-size</i> and <i>font-family.<br>
+  <p>To add or change the font size and style, you can use the properties, <i>font-size</i> and <i>font-family.</i><br>
   The value of font-size is determined by numbers and the value of font-family is the name of the font style, so for example, Times New Roman.
-  </i></p>
+  </p>
 </div>
 
 <button class="accordion">Text Align</button>
@@ -84,9 +87,9 @@ CSS describes how HTML elements are to be displayed on screen, paper, or in othe
       });
     }
     </script>
-  <div>
+  <h3>
     Classes vs IDs
-  </div>
+  </h3>
   <img src="https://www.slashcoding.com/wp-content/uploads/2014/06/id-vs-class.png" alt="class vs id" width="400" height="160">
   <div>
     Classes and IDs are both used to make applying CSS easier.<br>
@@ -94,11 +97,72 @@ CSS describes how HTML elements are to be displayed on screen, paper, or in othe
     After assigning a class or id on a element, you can choose that element in CSS by using a period for a class, and a hashtag for an id.
   </div>
   <img src="https://miro.medium.com/max/540/1*8zofLlRz-7Uc0djfOR_BiA.png" alt="class & id" width="230" height="180">
-  <div>
+  <h3>
     CSS Box Model
-  </div>
+  </h3>
+  <img src="https://media.gcflearnfree.org/content/5ef2084faaf0ac46dc9c10be_06_23_2020/box_model.png" alt="box model" width="450" height="270">
   <div>
-    
+    The box model includes the content, padding, border, and margin.
+    <ul>
+      <li>Content: The inner content of your HTML element. This is the area where text would be displayed.</li>
+      <li>Padding: A box that surrounds an HTML element's inner content. It is used to expand the space between the content and the border.</li>
+      <li>Border: A box that surrounds an HTML element's padding. </li>
+      <li>Margin: A functionally invisible box that surrounds an HTML element's border. The margin is meant to act as white space to separate HTML elements from each other.</li>
+    </ul>
+  </div>
+  <h3>
+    CSS Display Properties
+  </h3>
+  <img src="https://data-flair.training/blogs/wp-content/uploads/sites/2/2020/06/Block-level-Inline-elements-in-html-df.jpg" alt="block & inline" width="440" height="220">
+  <div>
+    In CSS, there are block properties and inline properties.<br>
+    Blocks always start on a new line and take up the full width, stretching out to the left and right as far as it can.<br>
+    On the other hand, an inline element starts wherever you put it and takes up only as much space as necessary.<br>
+    Here's a list of block and inline elements.<br>
+    <h3>Block</h3>
+    <ul>
+      <li>div</li>
+      <li>section</li>
+      <li>ol</li>
+      <li>ul</li>
+      <li>header</li>
+    </ul>
+    <h3>Inline</h3>
+    <ul>
+      <li>a</li>
+      <li>span</li>
+      <li>button</li>
+      <li>script</li>
+      <li>strong</li>
+    </ul>
+  </div>
+  <h3>
+    Floating
+  </h3>
+  <img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/03/web-text-wrap.png?resize=540%2C270&ssl=1" alt="float" width="430" height="200">
+  <div>
+    The Float property is used to position and format content. <br>
+    It lets you place an element on the left or right side of its container, allowing text and inline elements to wrap around it.<br>
+    Floating can be done by sing the formula, <br>
+    div {<br>
+      float: <i>value</i><br>
+    }<br>
+    The value can be left or right to push it to side.
+  </div>
+  <h3>
+    Position Properties
+  </h3>
+  <img src="https://www.csssolid.com/images/csspositions/css-position-all.png" alt="position properties" width="450" height="300">
+  <div>
+    There are 5 position properties in CSS, and they are static, relative, fixed, sticky, and absolute.<br>
+    <strong>Static</strong> is the default position when applied.<br>
+    <strong>Relative</strong> positions the element relative to the normal position it would otherwise have to offset an element from its default.<br>
+    <strong>Fixed</strong> will make it always stay where you put it even if a user scrolls down the page.<br>
+    <strong>Sticky</strong> is positioned based on the user's scroll position. It appears
+    fixed until a user tries to scroll, then moves along with the user, overriding other
+    elements.<br>
+    <strong>Absolute</strong> elements are placed in absolute position based either on their parent container or the overall document
+    body. <br>
   </div>
 </body>
 </html>
