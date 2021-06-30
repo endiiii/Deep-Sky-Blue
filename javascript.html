@@ -7,6 +7,21 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="Font_Roboto.css" type="text/css" rel="stylesheet">
         <title>JS Page</title>
+        <style>
+            .grid-container {
+              display: grid;
+              grid-template-columns: 200px 200px 200px;
+              padding: 10px;
+            }
+            .grid-item {
+              background-color: rgba(255, 255, 255, 0.8);
+              border: 1px solid rgba(0, 0, 0, 0.8);
+              padding: 20px;
+              font-size: 30px;
+              text-align: center;
+            }
+            </style>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <div class = "container">
@@ -14,17 +29,21 @@
                 <!-- Navigation bar maybe? -->
             </div>
         </div>
-        <!-- Title -->
-        <h1>Javascript Page</h1>
-
-        <br>
-        <br>
-
         <!-- Overivew-->
         <div>
-            <h3>Overview of Javascript</h3>
-            <p style = "margin-left: 30px; float: left;">Javascript lets us host and intereact with dynamic content on the web. It can create interactive applications that log user input, change what's displayed, and animate objects. Along with HTML and CSS, Javascript is one of three modern web programming languages. There are many components of Javascript.</p>
-            <img src="JavaScript.png" alt="JavaScript Logo" width="500px" height="300px" style="float: right;">
+            <div class = "row">
+                <div class = "col-8">
+                    <!-- Title -->
+                    <h1 class = "Roboto">Javascript Page</h1>
+                    <br>
+                    <br>
+                    <h3 class = "Roboto">Overview of Javascript</h3>
+                    <p class = "Roboto">Javascript lets us host and intereact with dynamic content on the web. It can create interactive applications that log user input, change what's displayed, and animate objects. Along with HTML and CSS, Javascript is one of three modern web programming languages. There are many components of Javascript.</p>
+                </div>
+                <div class = "col-4">
+                    <img src="JavaScript.png" alt="JavaScript Logo" width="500px" height="300px" style="margin-top: 10px;">
+                </div>
+            </div>
         </div>
 
         <!--Components of Javascript-->
@@ -40,6 +59,7 @@
                         </li>
                     </ol>
                 </li>
+                <br>
                 <li>Functions - A function is a predefined action that can be called later in your code. To define a function, the keyword "function" is used. Following this keyword is the name of your function, a set of paranthesis, and a set of curly braces. Inside these curly braces is where you put the code for your function. </li>
                 <li>Alerts, prompts, and confirms - Alerts, confirms, and prompts create popup windows in the browser when run. An alert is just a statement made in the popup window. A confirm gives the user the option to press "ok" or "cancel" when they read the statement in the popup window. Finally, a prompt requires a user-typed response to the popup window. </li>
                 <li>Conditional Statements - Conditions check the status of the code and help the program determine what to do. The "if" keyword allows us to specify code that should be run if the statement is satisfied. "If-else" statements can be used to check for another condition. Finally, "else" statements can be used to run code if none of the other statements are met.</li>
@@ -57,6 +77,232 @@
 
         <!--JQuery(Andy)-->
 
-            
+        <!--See what Javascript can do! (Tic Tac Toe)-->
+        <h3>See what JavaScript can do! (Tic Tac Toe)</h3>
+        <p>X goes first! Click the number on your keyboard to claim your square.</p>
+        <div class="grid-container">
+            <div class =grid-item id= "number_1">1</div>
+            <div class =grid-item id="number_2">2</div>
+            <div class =grid-item id="number_3">3</div>
+            <div class =grid-item id="number_4">4</div>
+            <div class =grid-item id="number_5">5</div>
+            <div class =grid-item id="number_6">6</div>
+            <div class =grid-item id="number_7">7</div>
+            <div class =grid-item id="number_8">8</div>
+            <div class =grid-item id="number_9">9</div>
+          </div>          
+        <p>Refresh the page to play again.</p>
+        <script type="text/javascript">
+        var x_Turn = 0
+        var one_status = 1
+        var two_status = 1
+        var three_status = 1
+        var four_status = 1
+        var five_status = 1
+        var six_status = 1
+        var seven_status = 1
+        var eight_status = 1
+        var nine_status = 1
+        var turns = 0
+        var winner = 0
+
+        var x_column1_points = 0
+        var x_column2_points = 0
+        var x_column3_points = 0
+        var x_row1_points = 0
+        var x_row2_points = 0
+        var x_row3_points = 0
+        var x_diagnol1_points = 0
+        var x_diagnol2_points = 0
+
+        var o_column1_points = 0
+        var o_column2_points = 0
+        var o_column3_points = 0
+        var o_row1_points = 0
+        var o_row2_points = 0
+        var o_row3_points = 0
+        var o_diagnol1_points = 0
+        var o_diagnol2_points = 0
+        document.addEventListener("keyup", checkKey, false);
+
+        function checkKey(event){
+            if(event.key == "1" && one_status == 1){
+                if(x_Turn == 0){
+                $("#number_1").text("X")
+                x_Turn = 1
+                one_status++
+                turns++
+                x_column1_points++
+                x_row1_points++
+                x_diagnol1_points++
+                }
+                else{
+                $("#number_1").text("O")
+                x_Turn = 0
+                one_status++
+                o_column1_points++
+                o_row1_points++
+                o_diagnol1_points++
+                } 
+            }
+            if(event.key == "2" && two_status == 1){
+                if(x_Turn == 0){
+                $("#number_2").text("X")
+                x_Turn = 1
+                two_status++
+                turns++
+                x_column2_points++
+                x_row1_points++
+                }
+                else{
+                $("#number_2").text("O")
+                x_Turn = 0
+                two_status++
+                o_column2_points++
+                o_row1_points++
+                } 
+            }
+            if(event.key == "3" && three_status == 1){
+                if(x_Turn == 0){
+                $("#number_3").text("X")
+                x_Turn = 1
+                three_status++
+                turns++
+                x_column3_points++
+                x_row1_points++
+                x_diagnol2_points++
+                }
+                else{
+                $("#number_3").text("O")
+                x_Turn = 0
+                three_status++
+                o_column3_points++
+                o_row1_points++
+                o_diagnol2_points++
+                } 
+            }
+            if(event.key == "4" && four_status == 1){
+                if(x_Turn == 0){
+                $("#number_4").text("X")
+                x_Turn = 1
+                four_status++
+                turns++
+                x_column1_points++
+                x_row2_points++
+                }
+                else{
+                $("#number_4").text("O")
+                x_Turn = 0
+                four_status++
+                o_column1_points++
+                o_row2_points++
+                } 
+            }
+            if(event.key == "5" && five_status == 1){
+                if(x_Turn == 0){
+                $("#number_5").text("X")
+                x_Turn = 1
+                five_status++
+                turns++
+                x_column2_points++
+                x_row2_points++
+                x_diagnol1_points++
+                x_diagnol2_points++
+                }
+                else{
+                $("#number_5").text("O")
+                x_Turn = 0
+                five_status++
+                o_column2_points++
+                o_row2_points++
+                o_diagnol1_points++
+                o_diagnol2_points++
+                } 
+            }
+            if(event.key == "6" && six_status == 1){
+                if(x_Turn == 0){
+                $("#number_6").text("X")
+                x_Turn = 1
+                six_status++
+                turns++
+                x_column3_points++
+                x_row2_points++
+                }
+                else{
+                $("#number_6").text("O")
+                x_Turn = 0
+                six_status++
+                o_column3_points++
+                o_row2_points++
+                } 
+            }
+            if(event.key == "7" && seven_status == 1){
+                if(x_Turn == 0){
+                $("#number_7").text("X")
+                x_Turn = 1
+                seven_status++
+                turns++
+                x_column1_points++
+                x_row3_points++
+                x_diagnol2_points++
+                }
+                else{
+                $("#number_7").text("O")
+                x_Turn = 0
+                seven_status++
+                o_column1_points++
+                o_row3_points++
+                o_diagnol2_points++
+                } 
+            }
+            if(event.key == "8" && eight_status == 1){
+                if(x_Turn == 0){
+                $("#number_8").text("X")
+                x_Turn = 1
+                eight_status++
+                turns++
+                x_column2_points++
+                x_row3_points++
+                }
+                else{
+                $("#number_8").text("O")
+                x_Turn = 0
+                eight_status++
+                o_column2_points++
+                o_row3_points++
+                } 
+            }
+            if(event.key == "9" && nine_status == 1){
+                if(x_Turn == 0){
+                $("#number_9").text("X")
+                x_Turn = 1
+                nine_status++
+                turns++
+                x_column3_points++
+                x_row3_points++
+                x_diagnol1_points++
+                }
+                else{
+                $("#number_9").text("O")
+                x_Turn = 0
+                nine_status++
+                o_column3_points++
+                o_row3_points++
+                o_diagnol1_points++
+                } 
+            }
+            if(x_column1_points == 3 || x_column2_points == 3 || x_column3_points == 3 || x_row1_points == 3 || x_row2_points == 3 || x_row3_points == 3 || x_diagnol1_points == 3 || x_diagnol2_points == 3){
+                alert("Congrats X, you have won!")
+                winner++
+            }
+            if(o_column1_points == 3 || o_column2_points == 3 || o_column3_points == 3 || o_row1_points == 3 || o_row2_points == 3 || o_row3_points == 3 || o_diagnol1_points == 3 || o_diagnol2_points == 3){
+                alert("Congrats O, you have won!")
+                winner++
+            }
+            if(turns == 5 && winner == 0){
+                alert("The game is a tie.")
+            }
+    }
+        </script>
     </body>
 </html>
