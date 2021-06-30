@@ -1,27 +1,159 @@
 <!DOCTYPE html>
-
+<html lang="en-us">
 <head>
-    <title> ---- </title>
-    <link href = "home.css" type = "text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deep Sky Blue</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="main.css">
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!--Icons-->
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+    <!--Font: Lora-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <!--ChannelSplitMaterial-->
+    <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
 </head>
 
 <body>
+    <div class="wrap">
 
-    <h1> Title </h1>
-    <hr>
+        <div class="hero">
+            <div class="nav-open-btn">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+            <div class="title-section">
+                <h1 id="title"></h1>
+                
+            </div>
 
-    <h4>HTML</h4>
-    <p> ------ </p>
+            <hr>
 
-    <h4>CSS</h4>
-    <p> ------ </p>
+            <div class="header">
+                <h2>HTML</h2>
+                <p> HTML is a <u>coding language</u> that stands for <b>Hypertext Markup Language</b> and is code used to structure websites and web pages and the content inside. While working with HTML we formatted paragraphs by changing how the fonts were presented, for example as a header or text, sizes, color, and the background color. We also learned about positioning things on a page with divs which split up the page, along with adding images to a webpage or website.</p>
+                <h2>CSS</h2>
+                <p> CSS is a <u>coding language</u> that stands for <b>Cascading Style Sheets</b> and it changes the presentation of Web pages. CSS can be used to change colors, the layout, and fonts of the texts. CSS can also be used in creating padding, borders, and margins around items and the pages that are being worked on. We used CSS for the layout of pages and the spacing between objects on the page. We did many drills that helped us by spacing out items and dividing the page between images/text. </p>
+                <h2>JavaScript</h2>
+                <p> A <u>scripting language</u> that allows complex features to be displayed. Using JavaScript one can create interactive content such as buttons or animated images. JavaScript can also be used to change HTML and CSS as well as calculate data. In this class we used JavaScript to create simple games, like rock paper scissors, and for keeping track of a players score or how many times an item has been clicked. </p>
+            </div>
+        </div>
 
-    <h4> JavaScript </h4>
-    <p> ------ </p>
+        <div class="menu">
+            <div class="nav-close-btn">
+                <ion-icon name="close"></ion-icon>
+        </div>
 
+        <div class="nav">
+            <ul class="main-menu">
+                <li class="main-menu-item">
+                    <a href="home.html">Home</a>
+                </li>
 
-    
+                <li class="main-menu-item">
+                    <a href="*">Showcase &nbsp; <ion-icon name="add"></ion-icon></a>
+
+                    <ul class="submenu">
+                        <li class="submenu-item">
+                            <a onclick="window.open('HTMLPage.html')">HTML</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a onclick="window.open('CSS_Page.html')">CSS</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a onclick="window.open('javascript.html')">JavaScript</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //title channelSplitMaterial
+        container = document.getElementById("title");
+
+        var text = new Blotter.Text("TITLE", {
+            family: "Serapion",
+            size: 80,
+            fill: "#000000",
+            paddingLeft: 20,
+            paddingRight: 20,
+            paddingTop: 20,
+            paddingBottom: 20
+        })
+
+        var settings = new Blotter.ChannelSplitMaterial();
+        settings.uniforms.uOffset.value = 0.05;
+        settings.uniforms.uRotation.value = 50;
+        settings.uniforms.uApplyBlur.value = 1;
+        settings.uniforms.uAnimateNoise.value = 1;
+
+        var blotter = new Blotter(settings, {
+            texts: text
+        })
+
+        var scope = blotter.forText(text);
+
+        scope.appendTo(container);
+
+        // mouse move
+
+        document.onmousemove = moveIt;
+        function moveIt(event) {
+            settings.uniforms.uRotation.value = (event.clientX * .15);
+            settings.uniforms.uOffset.value = (event.clientX * 0.0001);
+        }
+
+        ///////////////////////////////////////////////////////
+
+        //menu animation
+        $('ul.main-menu li').click(function(e) {
+            e.preventDefault();
+
+            if($(this).siblings('li').find('ul.submenu:visible').length) {
+                $('ul.submenu').slideUp('normal');
+            }
+            $(this).find('ul.submenu').slideToggle('normal');
+        });
+
+        var t1 = new TimelineMax({paused: true});
+
+        t1.to(".menu", 0.8, {
+            autoAlpha: 1
+        });
+
+        t1.staggerFrom(".main-menu li a:not(.submenu li a)", 1, {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeInOut
+        }, 0.1);
+
+        t1.from(".submenu", 0.8, {
+            autoAlpha: 0
+        });
+
+        t1.reverse();
+
+        $(document).on("click", ".nav-open-btn", function() {
+            t1.reversed(!t1.reversed());
+        });
+
+        $(document).on("click", ".nav-close-btn", function() {
+            t1.reversed(!t1.reversed());
+        });
+    </script>
 </body>
-
-
 </html>
