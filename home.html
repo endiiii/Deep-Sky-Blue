@@ -30,6 +30,18 @@
             <div class="nav-open-btn">
                 <ion-icon name="menu"></ion-icon>
             </div>
+            <h1 class="title"> Title </h1>
+
+            <hr>
+
+            <div class="header">
+                <h2>HTML</h2>
+                <p> ------ </p>
+                <h2>CSS</h2>
+                <p> ------ </p>
+                <h2>JavaScript</h2>
+                <p> A scripting language that allows complex features to be displayed. Using JavaScript one can create interactive content such as buttons or animated images. JavaScript can be used to change HTML and CSS as well as calculate data. </p>
+            </div>
         </div>
 
         <div class="menu">
@@ -48,16 +60,17 @@
 
                     <ul class="submenu">
                         <li class="submenu-item">
-                            <a href="HTML_PAGE.html">HTML</a>
+                            <a onclick="window.open('HTMLPage.html', '_blank')">HTML</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="CSS_Page.html">CSS</a>
+                            <a onclick="window.open('CSS_Page.html', '_blank')">CSS</a>
                         </li>
                         <li class="submenu-item">
-                            <a href="javascript.html">JavaScript</a>
+                            <a onclick="window.open('javascript.html', '_blank')">JavaScript</a>
                         </li>
                     </ul>
                 </li>
+            </ul>
         </div>
     </div>
     <script type="text/javascript">
@@ -95,7 +108,6 @@
         $(document).on("click", ".nav-close-btn", function() {
             t1.reversed(!t1.reversed());
         });
-
     </script>
 </body>
 </html>
