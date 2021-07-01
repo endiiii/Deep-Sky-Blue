@@ -4,59 +4,331 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="Font_Roboto.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"crossorigin="anonymous">
+        <link href="main.css" type="text/css" rel="stylesheet">
         <title>JS Page</title>
+        <style>
+            .grid-container {
+              display: grid;
+              grid-template-columns: 200px 200px 200px;
+              padding: 10px;
+            }
+            .grid-item {
+              background-color: rgba(255, 255, 255, 0.8);
+              border: 1px solid rgba(0, 0, 0, 0.8);
+              padding: 20px;
+              font-size: 30px;
+              text-align: center;
+            }
+            </style>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
-    <body>
+    <body style="background-color: lightgray;">
         <div class = "container">
             <div class = "row">
                 <!-- Navigation bar maybe? -->
             </div>
         </div>
-        <!-- Title -->
-        <h1>Javascript Page</h1>
-
-        <br>
-        <br>
-
+      
         <!-- Overivew-->
         <div>
-            <h3>Overview of Javascript</h3>
-            <p style = "margin-left: 30px; float: left;">Javascript lets us host and intereact with dynamic content on the web. It can create interactive applications that log user input, change what's displayed, and animate objects. Along with HTML and CSS, Javascript is one of three modern web programming languages. There are many components of Javascript.</p>
-            <img src="JavaScript.png" alt="JavaScript Logo" width="500px" height="300px" style="float: right;">
+            <div class = "row">
+                <div class = "col-8">
+                    <!-- Title -->
+                    <h1>JavaScript Page</h1>
+                    <br>
+                    <div class="buttons">
+                    <a class="btn btn-primary btn-sm" href="home.html">Home</a>
+                    <a class="btn btn-secondary btn-sm" href="CSS_Page.html">Previous</a>
+                    </div>
+                    <br>
+                    <h3>Overview of JavaScript</h3>
+                    <p>JavaScript lets us host and interact with dynamic content on the web. It can create interactive applications that log user input, change what's displayed, and animate objects. Along with HTML and CSS, JavaScript is one of three modern web programming languages. There are many components of JavaScript.</p>
+                </div>
+                <div class = "col-4">
+                    <img src="JavaScript.png" alt="JavaScript Logo" width="500px" height="300px" style="margin-top: 10px;">
+                </div>
+            </div>
         </div>
 
-        <!--Components of Javascript-->
+        <!--Components of JavaScript-->
         <div>
-            <h3>Components of Javascript</h3>
+            <h3>Components of JavaScript</h3>
             <ul>
                 <li>Variables - A variable is like a bucket. A variable is a named location for a value that gets stored in the browser's memory when a program is run. There are three main data types that you can store into a variable. 
                     <ol>
                         <li>Strings - Written text</li>
-                        <li>Integers - Numeric data
-                        </li>
+                        <li>Integers - Numeric data</li>
                         <li>Booleans - True/False statements
                         </li>
                     </ol>
                 </li>
-                <li>Functions - A function is a predefined action that can be called later in your code. To define a function, the keyword "function" is used. Following this keyword is the name of your function, a set of paranthesis, and a set of curly braces. Inside these curly braces is where you put the code for your function. </li>
-                <li>Alerts, prompts, and confirms - Alerts, confirms, and prompts create popup windows in the browser when run. An alert is just a statement made in the popup window. A confirm gives the user the option to press "ok" or "cancel" when they read the statement in the popup window. Finally, a prompt requires a user-typed response to the popup window. </li>
-                <li>Conditional Statements - Conditions check the status of the code and help the program determine what to do. The "if" keyword allows us to specify code that should be run if the statement is satisfied. "If-else" statements can be used to check for another condition. Finally, "else" statements can be used to run code if none of the other statements are met.</li>
-                <li>Arrays - Arrays let us store multiple values within a single variable. In code, we can access one of the values of an array. </li>
-                <li>Random Numbers - Random number generators can be used to create random eveents while the code is running. "Math.random" is what is used to generate a random number.</li>
-                <li>Loops - "For loops" allow a code operation to be exeecuted repeatedly. A for loop is written by having the amount of times it should run in a set of paranthesis and curly brackets that contain the code that should be run. </li>
+                <br>
+                <li>Functions - A function is a predefined action that can be called later in your code. To define a function, the keyword "function" is used. Following this keyword is the name of your function, a set of paranthesis, and a set of curly braces. Inside these curly braces is where you put the code for your function. For example, a function that prints "hello" to the console would be written like this: function hello(){
+                    console.log("Hello")}
+                To then invoke the function, we would write: hello();</li>
+                <br>
+                <li>Alerts, prompts, and confirms - Alerts, confirms, and prompts create popup windows in the browser. An alert is just a statement made in the popup window. A confirm gives the user the option to press "ok" or "cancel" when they read the statement in the popup window. Finally, a prompt requires a user-typed response to the popup window.</li>
+                <br>
+                <li>Conditional Statements - Conditions check the status of the code and help the program determine what to do. The "if" keyword allows us to specify code that should be run if the statement is satisfied. "If-else" statements can be used to check for another condition. Finally, "else" statements can be used to run code if none of the other "if" statements are met.</li>
+                <br>
+                <li>Arrays - Arrays let us store multiple values within a single variable. In code, we can access one of the values of an array, or multiple values of an array.</li>
+                <br>
+                <li>Random Numbers - Random number generators can be used to create random events while the code is running. "Math.random" is used to generate a random number.</li>
+                <br>
+                <li>Loops - "For loops" allow a code operation to be executed repeatedly. A "for loop" is written with the amount of times it should run in a set of paranthesis and curly brackets that contain the code that should be run. </li>
             </ul>
         </div>
         <br>
          <!--DOM Model-->
         <div>
             <h3>The DOM (Document Object Model)</h3>
-            <p style="margin-left: 30px;">The DOM is a representation of HTML modeled as JavaScript objects. HTML elements have parent-child relationships. Using "document.-" we can alter these relationships, therefore editing the actual HTML page itself. This is much easier to look at for the user rather than using alerts. Jquery makes editing HTML pages even easier.</p>
+            <p style="margin-left: 30px;">The DOM is a representation of HTML modeled as JavaScript objects. HTML elements have parent-child relationships. Using "document.-" we can alter these relationships, therefore editing the actual HTML page itself. This is much easier to look at for the user rather than using alerts, prompts, and confirms. jQuery makes editing HTML pages even easier.</p>
+        <br>
         </div>
 
-        <!--JQuery(Andy)-->
+        <!--JQuery-->
+        <div>
+            <h3>jQuery</h3>
+            <p style="margin-left: 30px;">jQuery is a JavaScript library which simplifies HTML scripting. It is most useful for inserting, updating, or removing HTML. It can also register click or other change events, animate HTML elements, and download data from databases. jQuerey contains event listeners. Event listeners are jQuery functions that wait for a trigger or a specific event to occur before taking action. There is an event listener for when a key is pressed, for example. The dollar sign is an alias, or shorthand for jQuery. This is how you let the program know that you are about to write a jQuery function, such as an event listener. </p>
+            <br>
+        </div>
 
-            
+        <!--See what Javascript can do! (Tic Tac Toe)-->
+        <h3>See what JavaScript can do! (Tic Tac Toe)</h3>
+        <p id = "instructions">X goes first! Click the number on your keyboard to claim your square.</p>
+        <div class="grid-container">
+            <div class =grid-item id= "number_1">1</div>
+            <div class =grid-item id="number_2">2</div>
+            <div class =grid-item id="number_3">3</div>
+            <div class =grid-item id="number_4">4</div>
+            <div class =grid-item id="number_5">5</div>
+            <div class =grid-item id="number_6">6</div>
+            <div class =grid-item id="number_7">7</div>
+            <div class =grid-item id="number_8">8</div>
+            <div class =grid-item id="number_9">9</div>
+          </div>          
+        <p>Refresh the page to play again.</p>
+        <script type="text/javascript">
+        var x_Turn = 0
+        var one_status = 1
+        var two_status = 1
+        var three_status = 1
+        var four_status = 1
+        var five_status = 1
+        var six_status = 1
+        var seven_status = 1
+        var eight_status = 1
+        var nine_status = 1
+        var turns = 0
+        var winner = 0
+
+        var x_column1_points = 0
+        var x_column2_points = 0
+        var x_column3_points = 0
+        var x_row1_points = 0
+        var x_row2_points = 0
+        var x_row3_points = 0
+        var x_diagnol1_points = 0
+        var x_diagnol2_points = 0
+
+        var o_column1_points = 0
+        var o_column2_points = 0
+        var o_column3_points = 0
+        var o_row1_points = 0
+        var o_row2_points = 0
+        var o_row3_points = 0
+        var o_diagnol1_points = 0
+        var o_diagnol2_points = 0
+        
+        document.addEventListener("keyup", checkKey, false);
+
+        function checkKey(event){
+            if(event.key == "1" && one_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_1").text("X")
+                x_Turn = 1
+                one_status++
+                turns++
+                x_column1_points++
+                x_row1_points++
+                x_diagnol1_points++
+                }
+                else{
+                $("#number_1").text("O")
+                x_Turn = 0
+                one_status++
+                o_column1_points++
+                o_row1_points++
+                o_diagnol1_points++
+                } 
+            }
+            if(event.key == "2" && two_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_2").text("X")
+                x_Turn = 1
+                two_status++
+                turns++
+                x_column2_points++
+                x_row1_points++
+                }
+                else{
+                $("#number_2").text("O")
+                x_Turn = 0
+                two_status++
+                o_column2_points++
+                o_row1_points++
+                } 
+            }
+            if(event.key == "3" && three_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_3").text("X")
+                x_Turn = 1
+                three_status++
+                turns++
+                x_column3_points++
+                x_row1_points++
+                x_diagnol2_points++
+                }
+                else{
+                $("#number_3").text("O")
+                x_Turn = 0
+                three_status++
+                o_column3_points++
+                o_row1_points++
+                o_diagnol2_points++
+                } 
+            }
+            if(event.key == "4" && four_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_4").text("X")
+                x_Turn = 1
+                four_status++
+                turns++
+                x_column1_points++
+                x_row2_points++
+                }
+                else{
+                $("#number_4").text("O")
+                x_Turn = 0
+                four_status++
+                o_column1_points++
+                o_row2_points++
+                } 
+            }
+            if(event.key == "5" && five_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_5").text("X")
+                x_Turn = 1
+                five_status++
+                turns++
+                x_column2_points++
+                x_row2_points++
+                x_diagnol1_points++
+                x_diagnol2_points++
+                }
+                else{
+                $("#number_5").text("O")
+                x_Turn = 0
+                five_status++
+                o_column2_points++
+                o_row2_points++
+                o_diagnol1_points++
+                o_diagnol2_points++
+                } 
+            }
+            if(event.key == "6" && six_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_6").text("X")
+                x_Turn = 1
+                six_status++
+                turns++
+                x_column3_points++
+                x_row2_points++
+                }
+                else{
+                $("#number_6").text("O")
+                x_Turn = 0
+                six_status++
+                o_column3_points++
+                o_row2_points++
+                } 
+            }
+            if(event.key == "7" && seven_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_7").text("X")
+                x_Turn = 1
+                seven_status++
+                turns++
+                x_column1_points++
+                x_row3_points++
+                x_diagnol2_points++
+                }
+                else{
+                $("#number_7").text("O")
+                x_Turn = 0
+                seven_status++
+                o_column1_points++
+                o_row3_points++
+                o_diagnol2_points++
+                } 
+            }
+            if(event.key == "8" && eight_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_8").text("X")
+                x_Turn = 1
+                eight_status++
+                turns++
+                x_column2_points++
+                x_row3_points++
+                }
+                else{
+                $("#number_8").text("O")
+                x_Turn = 0
+                eight_status++
+                o_column2_points++
+                o_row3_points++
+                } 
+            }
+            if(event.key == "9" && nine_status == 1 && winner == 0){
+                if(x_Turn == 0){
+                $("#number_9").text("X")
+                x_Turn = 1
+                nine_status++
+                turns++
+                x_column3_points++
+                x_row3_points++
+                x_diagnol1_points++
+                }
+                else{
+                $("#number_9").text("O")
+                x_Turn = 0
+                nine_status++
+                o_column3_points++
+                o_row3_points++
+                o_diagnol1_points++
+                } 
+            }
+            if(x_column1_points == 3 || x_column2_points == 3 || x_column3_points == 3 || x_row1_points == 3 || x_row2_points == 3 || x_row3_points == 3 || x_diagnol1_points == 3 || x_diagnol2_points == 3){
+                if(winner == 0){
+                var newDiv = $("<p>");
+                newDiv.text("Congrats X, you have won!")
+                $("#instructions").append(newDiv);
+                winner++
+             }
+            }
+            if(o_column1_points == 3 || o_column2_points == 3 || o_column3_points == 3 || o_row1_points == 3 || o_row2_points == 3 || o_row3_points == 3 || o_diagnol1_points == 3 || o_diagnol2_points == 3){
+                if(winner == 0){
+                var newDiv = $("<p>");
+                newDiv.text("Congrats O, you have won!")
+                $("#instructions").append(newDiv);
+                winner++
+             }
+            }
+            if(turns == 5 && winner == 0){
+                alert("The game is a tie.")
+            }
+    }
+        </script>
     </body>
 </html>

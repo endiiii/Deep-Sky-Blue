@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@font-face{
+    font-family: Serapion;
+    src: url(Serapion.otf);
+}
 
 html, body {
     margin: 0;
@@ -7,10 +11,15 @@ html, body {
     font-family: 'Lora', serif;
 }
 
-.title{
+#title{
     text-align: center;
-    margin: inherit;
-    line-height: 5em;
+    margin: 0;
+}
+
+#desc{
+    text-align: center;
+    position: relative;
+    font-family: Serapion;
 }
 
 .header{
@@ -43,6 +52,7 @@ html, body {
 .nav-close-btn {
     position: fixed;
     margin: 2em;
+    margin-top: 2em;
     font-size: 24px;
     color: #fff;
     z-index: 1;
