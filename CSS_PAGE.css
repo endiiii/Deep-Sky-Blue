@@ -1,4 +1,111 @@
 .accordion {
+<<<<<<< HEAD
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    border-color: rgb(148, 155, 155)
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /*font-family: 'Roboto', sans-serif;*/
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.logo{
+  text-align: center;
+  padding: 30px;
+}
+.title{
+  font-size: xx-large;
+  text-align: center;
+}
+.css{
+  font-size: large;
+  padding: 30px;
+}
+.htmlcss{
+  float:left;
+  padding:40px
+}
+body{
+  background-color: rgba(248, 247, 247, 0.993);
+}
+.syntax{
+  text-align: center;
+  font-size: larger;
+}
+.classid{
+  float:left;
+  padding: 30px;
+}
+.idclass{
+  float:right;
+}
+.boxmodel{
+  text-align: center;
+  font-size: larger;
+}
+.content{
+  font-size: large;
+}
+.selector{
+  padding: 15px;
+}
+#box{
+  padding:10px;
+}
+.block{
+  padding:20px;
+  text-align:center;
+}
+.inline{
+  font-size: large;
+}
+.display{
+  text-align: center;
+}
+.border{
+  border-color: black;
+}
+.float{
+  float: left;
+  padding: 20px;
+}
+#float{
+  padding: 10px;
+  font-size: large;
+}
+.floating{
+  padding:15px;
+  text-align: center;
+}
+.position{
+  text-align: center;
+  font-size: large;
+}
+#position{
+  font-size: large;
+  padding: 40px;
+}
+#property{
+  padding: 30px;
+}
+.big{
+  padding:10px;
+  text-align: center;
+}
+.cssabout{
+  padding: 50px;
+  font-size: large;
+  text-align: center;
+}
+  
+=======
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -31,3 +138,4 @@
 .roboto{
   font-family: 'Roboto', sans-serif;
 }
+>>>>>>> 70ad714ca368cef761844f1c039dc82ae1738793
